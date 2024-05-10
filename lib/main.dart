@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:vpn_basic_project/allScreens/home_screen.dart';
 
 
 Future<void> main() async {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Free Vpn',
       theme: ThemeData(
           appBarTheme: AppBarTheme(
@@ -25,11 +27,7 @@ class MyApp extends StatelessWidget {
           ),
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text("Hello World", style: TextStyle(color: Colors.yellow),),
-        ),
-      ),
+      home: HomeScreen(),
     );
   }
 }
